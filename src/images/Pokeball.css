@@ -1,0 +1,22 @@
+.ball {
+  color: ivory;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+  display: grid;
+  place-items: center;
+}
+
+.ball h3,
+.ball p {
+  margin: 0;
+}
+
+.ball button {
+  background: transparent;
+  border-radius: 50%;
+  border-color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}

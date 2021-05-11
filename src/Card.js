@@ -4,16 +4,17 @@ import Pokeball from './images/pokeball.svg';
 export default function Card(props) {
   // const name = props.name;
   // const type = props.type
-  const { name, type } = props;
+  const { name, type, onPlaceToPokedex } = props;
 
   return (
     <article className="card" style={{ background: getColor(type) }}>
       <h2>{name}</h2>
       <p>{type}</p>
-      <button>
+      <button onClick={() => onPlaceToPokedex(name)}>
         <img
           src={Pokeball}
-          style={{ width: '30px', height: '30px' }}
+          width="30"
+          height="30"
           alt="Catch pokemon and add to pokeball"
         />
       </button>
@@ -23,11 +24,12 @@ export default function Card(props) {
 
 function getColor(element) {
   const backgroundColors = {
-    Elektro: 'yellow',
+    Elektro: 'gold',
     Feuer: 'crimson',
     Pflanze: 'green',
-    Wasser: 'deepskyblue',
-    Frosch: 'limegreen',
+    Wasser: 'midnightblue',
+    Käfer: 'sandybrown',
+    Fee: 'lightpink',
     default: 'grey',
   };
 
